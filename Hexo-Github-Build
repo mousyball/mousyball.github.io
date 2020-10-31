@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo + Github Blog 建立過程 - Mo1cibo&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Mo1cibo&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Mo1cibo&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="這篇文章就簡單紀錄一下，建立這個 Blog 的過程。"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo + Github Blog 建立過程"><meta property="og:url" content="https://mousyball.github.io/Hexo-Github-Build"><meta property="og:site_name" content="Mo1cibo&#039;s Blog"><meta property="og:description" content="這篇文章就簡單紀錄一下，建立這個 Blog 的過程。"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://imgur.com/Lxb9EV3.png"><meta property="article:published_time" content="2018-02-11T21:51:35.000Z"><meta property="article:modified_time" content="2018-02-18T08:03:47.725Z"><meta property="article:author" content="Mo1cibo"><meta property="article:tag" content="HEXO"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://imgur.com/Lxb9EV3.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mousyball.github.io/Hexo-Github-Build"},"headline":"Mo1cibo's Blog","image":["http://imgur.com/Lxb9EV3.png"],"datePublished":"2018-02-11T21:51:35.000Z","dateModified":"2018-02-18T08:03:47.725Z","author":{"@type":"Person","name":"Mo1cibo"},"description":"這篇文章就簡單紀錄一下，建立這個 Blog 的過程。"}</script><link rel="canonical" href="https://mousyball.github.io/Hexo-Github-Build"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-02-11T21:51:35.000Z" title="2018-02-11T21:51:35.000Z">2018-02-11</time></span><span class="level-item">Updated&nbsp;<time dateTime="2018-02-18T08:03:47.725Z" title="2018-02-18T08:03:47.725Z">2018-02-18</time></span><span class="level-item"> Mo1cibo </span><span class="level-item"><a class="link-muted" href="/categories/HEXO/">HEXO</a></span></div></div><h1 class="title is-3 is-size-4-mobile">Hexo + Github Blog 建立過程</h1><div class="content"><p>這篇文章就簡單紀錄一下，建立這個 Blog 的過程。</p>
+<a id="more"></a>
+
+<h2 id="建置環境"><a href="#建置環境" class="headerlink" title="建置環境"></a>建置環境</h2><p>OS: Windows 10<br>Hexo: 3.2.2<br><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a>: 8.9.4<br><a target="_blank" rel="noopener" href="https://desktop.github.com/">Github Desktop</a></p>
+<h2 id="Blog-建立步驟"><a href="#Blog-建立步驟" class="headerlink" title="Blog 建立步驟"></a>Blog 建立步驟</h2><ul>
+<li>安裝 Node.js 和 Git Desktop<br>  - <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a>：版本我是載當時最新的 8.9.4。<br>  - <a target="_blank" rel="noopener" href="https://desktop.github.com/">Github Desktop</a></li>
+</ul>
+<h3 id="Github-配置"><a href="#Github-配置" class="headerlink" title="Github 配置"></a>Github 配置</h3><p>創建放置 Blog 檔案的 Repository</p>
+<blockquote>
+<p>[Note] Repository 名稱為 yourname.github.io，yourname是你的帳號名稱</p>
+</blockquote>
+<h3 id="Github-Desktop-與-Github-同步"><a href="#Github-Desktop-與-Github-同步" class="headerlink" title="Github Desktop 與 Github 同步"></a>Github Desktop 與 Github 同步</h3><p>首先，把剛創的 Repository Clone 到本地端：<br><img src="http://imgur.com/Lxb9EV3.png" alt="Github Desktop" width="70%"/><br>然後右鍵剛拉下來的 Repository，選取 Open in Git Shell 打開 powershell，執行指令將 Github 上的倉庫拉到本地端。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h3><p>首先，使用 npm 安裝 hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安裝成功後，輸入以下指令可查看安裝版本</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br><span class="line">hexo: <span class="number">3.2</span><span class="number">.2</span></span><br><span class="line">hexo-cli: <span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">os: Windows_NT <span class="number">10.0</span><span class="number">.10586</span> win32 x64</span><br><span class="line">http_parser: <span class="number">2.7</span><span class="number">.0</span></span><br><span class="line">node: <span class="number">7.3</span><span class="number">.0</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>接下來就可以來初始化我們的第一個 Blog 了，依序輸入以下指令：</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init       # 初始化 blog</span><br><span class="line">npm install     # 安裝相關套件</span><br><span class="line">hexo g          # 產生 blog 靜態文件</span><br><span class="line">hexo s          # 啟動本地瀏覽，用於預覽 blog</span><br></pre></td></tr></table></figure>
+
+<p>再來就可以用瀏覽器訪問<code>http://localhost:4000/</code>了，預設會有一個 Hello-World 的文章，如 <a href="https://mousyball.github.io/2018/02/11/hello-world/">Hexo’s Hello World</a>。</p>
+<h3 id="安裝其他插件"><a href="#安裝其他插件" class="headerlink" title="安裝其他插件"></a>安裝其他插件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/deployment.html#Git">hexo-deployer-git</a></p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>修改設定<br>- repo: 儲存庫（Repository）網址<br>- branch: 分支名稱。如果您使用的是 GitHub 或 GitCafe 的話，程式會嘗試自動偵測。<br>- message: 自定提交訊息</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> [<span class="string">branch</span>]</span><br><span class="line">  <span class="attr">message:</span> [<span class="string">message</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/jaredly/hexo-admin">hexo-admin</a></p>
+<p>安裝 hexo 後台</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-admin-qiniu --save</span><br></pre></td></tr></table></figure>
+
+<p>使用方法</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -d</span><br><span class="line"><span class="keyword">open</span> <span class="string">&quot;http://localhost:4000/admin/&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/coneycode/hexo-git-backup#git-backup">hexo-git-backup</a></p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure>
+
+<p>使用方法</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo backup</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></p>
+<p>安裝</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>於 <code>_config.yml</code> 加入</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="HEXO-Blog-設定"><a href="#HEXO-Blog-設定" class="headerlink" title="HEXO Blog 設定"></a>HEXO Blog 設定</h2><h3 id="安裝主題"><a href="#安裝主題" class="headerlink" title="安裝主題"></a>安裝主題</h3><p>使用的主題為 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NEXT</a></p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> hexo</span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>於 <code>_config.yml</code> 中修改使用主題</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="主題設定"><a href="#主題設定" class="headerlink" title="主題設定"></a>主題設定</h3><ul>
+<li><p>scheme</p>
+<p>至 <code>next/_config.yml</code> 修改至 <code>scheme: Muse</code></p>
+</li>
+<li><p>animation</p>
+<p>因為我不喜歡動畫所以把它關掉</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use velocity to animate everything.</span></span><br><span class="line"><span class="attr">motion:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>disqus</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">shortname:</span> [<span class="string">your_disqus_name</span>]</span><br><span class="line">  <span class="attr">count:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MathJax</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Post updated time</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">updated_at:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="Blog-配置"><a href="#Blog-配置" class="headerlink" title="Blog 配置"></a>Blog 配置</h3><ol>
+<li><p>tags/categories page<br> 設定方法照 <a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/wiki">iissnan/hexo-theme-next - Wiki</a><br> - 创建分类页面<br> - 创建标签云页面<br> 這兩個教學去設定</p>
+</li>
+<li><p>設定文章開頭的 snippet<br> 在 scaffolds 下的 post.md 文件，其功能是用來建置文章的初始狀態。</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> &#123;&#123; <span class="string">title</span> &#125;&#125;</span><br><span class="line"><span class="attr">author:</span> <span class="string">Mo1cibo</span></span><br><span class="line"><span class="attr">date:</span> &#123;&#123; <span class="string">date</span> &#125;&#125;</span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="attr">permalink:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Disqus 留言板<br> 簡單步驟如下<br> 1.去 <a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a> 申請帳號<br> 2.去 <code>next/_config.yml</code> 中貼上自己的 disqus shortname</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">shortname:</span> [<span class="string">your_disqus_name</span>]</span><br><span class="line">  <span class="attr">count:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p> 詳細的設定及修改可以參考以下網頁<br> <a target="_blank" rel="noopener" href="http://morris821028.github.io/2014/04/12/web/hexo-comment/">解決 Hexo Comment !</a><br> <a target="_blank" rel="noopener" href="https://dotblogs.com.tw/dotblogs/2015/11/24/183531">Disqus 留言系統基本設定與匯入舊留言教學</a></p>
+</li>
+<li><p>設定字型<br> 1.於 <a target="_blank" rel="noopener" href="https://fonts.google.com/">Google Fonts</a> 上找想要的字型，例如 <code>DF Dejavu Pro Regular</code><br> 2.於 <code>next/_config.yml</code> 中加入</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">DF</span> <span class="string">Dejavu</span> <span class="string">Pro</span> <span class="string">Regular</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Permalink<br> 使用永久連結主要有兩個原因<br> 1.避免修改標題後，搜尋引擎找到舊的網址。<br> 2.自訂英文網址，使搜尋引擎關鍵字容易查詢到。<br> 可參考: <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/permalinks.html">Permalinks</a></p>
+</li>
+<li><p>Google Analytics<br> 註冊 Google Analytics<br> 修改 <code>_config.yml</code>，新增ID：<code>google_analytics: UA-xxxxxxxx-x</code></p>
+</li>
+<li><p>Google Search console<br> 依照指示將一個 html 上傳至 repo 驗證</p>
+</li>
+<li><p>Favicon<br> 依照喜好於 <code>next/_config.yml</code> 修改網頁的小圖示<br> 圖片路徑為： <code>...\Blog\themes\next\source\images</code></p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/images/favicon-16x16-next.png</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/images/favicon-32x32-next.png</span></span><br><span class="line">  <span class="attr">apple_touch_icon:</span> <span class="string">/images/apple-touch-icon-next.png</span></span><br><span class="line">  <span class="attr">safari_pinned_tab:</span> <span class="string">/images/logo.svg</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Avatar<br> 依照喜好於 <code>next/_config.yml</code> 修改網頁的小圖示<br> 圖片路徑為： <code>...\Blog\themes\next\source\images</code></p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">/images/avatar.gif</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sitemap<br>安裝完 <code>hexo-generator-sitemap</code>，然後 deploy 就會在 public 資料夾自動產生 <code>sitemap.xml</code></p>
+<p>再來到 <code>_config.yml</code> 加入 sitemap 選項</p>
+<p>然後就可以到 google search console 上面設定 sitemap 路徑了</p>
+<p>以往經驗大概過一兩天就會撈到資料了</p>
+<p>可參考: <a target="_blank" rel="noopener" href="http://fionat.github.io/2016/04/02/sitemap/">｜Hexo优化｜如何向google提交sitemap（详细）</a></p>
+</li>
+</ol>
+<h2 id="常用-HEXO-指令"><a href="#常用-HEXO-指令" class="headerlink" title="常用 HEXO 指令"></a>常用 HEXO 指令</h2><p>新增 page / post</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;postName&quot;</span>       # 產生新的文章</span><br><span class="line">$ hexo new page <span class="string">&quot;pageName&quot;</span>  # 產生新的頁面</span><br></pre></td></tr></table></figure>
+
+<p>指令簡寫</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n == hexo new        # 產生新的 post/page/draft</span><br><span class="line">$ hexo g == hexo generate   # 產生靜態文件</span><br><span class="line">$ hexo s == hexo server     # 啟動本地瀏覽</span><br><span class="line">$ hexo d == hexo deploy     # 部署文件至 Github 上</span><br></pre></td></tr></table></figure>
+
+<p>指令組合</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g   # 產生靜態文件後，部署 blog</span><br><span class="line">$ hexo s -g   # 產生靜態文件後，預覽 blog</span><br></pre></td></tr></table></figure>
+
+<p>使用 hexo-admin</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -d</span><br><span class="line"><span class="keyword">open</span> <span class="string">&quot;http://localhost:4000/admin/&quot;</span></span><br></pre></td></tr></table></figure></div><div class="article-licensing box"><div class="licensing-title"><p>Hexo + Github Blog 建立過程</p><p><a href="https://mousyball.github.io/Hexo-Github-Build">https://mousyball.github.io/Hexo-Github-Build</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Mo1cibo</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2018-02-11</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2018-02-18</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/HEXO/">HEXO</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/my-vscode-setting"><i class="level-item fas fa-chevron-left"></i><span class="level-item">VSCode 使用設定</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/mathjax-support"><span class="level-item">Hexo 顯示數學公式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://mousyball.github.io/Hexo-Github-Build';
+            this.page.identifier = '/Hexo-Github-Build';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'mousyball' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/doge_avatar.jpg" alt="Mo1cibo"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Mo1cibo</p><p class="is-size-6 is-block">Blog &amp; Doge</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Taiwan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">5</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/mousyball" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/HEXO/"><span class="level-start"><span class="level-item">HEXO</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Murmur/"><span class="level-start"><span class="level-item">Murmur</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/VSCode/"><span class="level-start"><span class="level-item">VSCode</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-03T11:38:00.000Z">2020-11-03</time></p><p class="title"><a href="/New-Journey">New Journey</a></p><p class="categories"><a href="/categories/Murmur/">Murmur</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-23T05:28:52.000Z">2018-02-22</time></p><p class="title"><a href="/Cmder-powerline-env-prompt-for-conda">Cmder-powerline-env-prompt for conda</a></p><p class="categories"><a href="/categories/VSCode/">VSCode</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-11T23:00:52.000Z">2018-02-11</time></p><p class="title"><a href="/my-vscode-setting">VSCode 使用設定</a></p><p class="categories"><a href="/categories/VSCode/">VSCode</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-11T21:51:35.000Z">2018-02-11</time></p><p class="title"><a href="/Hexo-Github-Build">Hexo + Github Blog 建立過程</a></p><p class="categories"><a href="/categories/HEXO/">HEXO</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-01-01T13:37:34.000Z">2017-01-01</time></p><p class="title"><a href="/mathjax-support">Hexo 顯示數學公式</a></p><p class="categories"><a href="/categories/HEXO/">HEXO</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/02/"><span class="level-start"><span class="level-item">February 2018</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/12/"><span class="level-start"><span class="level-item">December 2016</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/HEXO/"><span class="tag">HEXO</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Murmur/"><span class="tag">Murmur</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VSCode/"><span class="tag">VSCode</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cmder/"><span class="tag">cmder</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prompt/"><span class="tag">prompt</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2020 Mo1cibo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

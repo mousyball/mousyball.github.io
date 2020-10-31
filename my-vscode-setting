@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>VSCode 使用設定 - Mo1cibo&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Mo1cibo&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Mo1cibo&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="這篇主要在記錄使用 VSCode 環境建立的採坑過程  OS: Windows 10"><meta property="og:type" content="blog"><meta property="og:title" content="VSCode 使用設定"><meta property="og:url" content="https://mousyball.github.io/my-vscode-setting"><meta property="og:site_name" content="Mo1cibo&#039;s Blog"><meta property="og:description" content="這篇主要在記錄使用 VSCode 環境建立的採坑過程  OS: Windows 10"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://imgur.com/QkgMirF.jpg"><meta property="og:image" content="https://imgur.com/VDhafpo.jpg"><meta property="og:image" content="https://imgur.com/8pGPArG.jpg"><meta property="article:published_time" content="2018-02-11T23:00:52.000Z"><meta property="article:modified_time" content="2018-02-22T15:20:25.755Z"><meta property="article:author" content="Mo1cibo"><meta property="article:tag" content="VSCode"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://imgur.com/QkgMirF.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mousyball.github.io/my-vscode-setting"},"headline":"Mo1cibo's Blog","image":["https://imgur.com/QkgMirF.jpg","https://imgur.com/VDhafpo.jpg","https://imgur.com/8pGPArG.jpg"],"datePublished":"2018-02-11T23:00:52.000Z","dateModified":"2018-02-22T15:20:25.755Z","author":{"@type":"Person","name":"Mo1cibo"},"description":"這篇主要在記錄使用 VSCode 環境建立的採坑過程  OS: Windows 10"}</script><link rel="canonical" href="https://mousyball.github.io/my-vscode-setting"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-02-11T23:00:52.000Z" title="2018-02-11T23:00:52.000Z">2018-02-11</time></span><span class="level-item">Updated&nbsp;<time dateTime="2018-02-22T15:20:25.755Z" title="2018-02-22T15:20:25.755Z">2018-02-22</time></span><span class="level-item"> Mo1cibo </span><span class="level-item"><a class="link-muted" href="/categories/VSCode/">VSCode</a></span></div></div><h1 class="title is-3 is-size-4-mobile">VSCode 使用設定</h1><div class="content"><p>這篇主要在記錄使用 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode</a> 環境建立的採坑過程</p>
+<blockquote>
+<p>OS: Windows 10</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="一般設定"><a href="#一般設定" class="headerlink" title="一般設定"></a>一般設定</h2><p>在 <code>使用者設定</code> 中添加下列修改</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;editor.formatOnPaste&quot;: true,</span><br><span class="line">&quot;editor.fontSize&quot;: 15,</span><br><span class="line">&quot;editor.fontFamily&quot;: &quot;DejaVu Sans Mono, &#x27;微軟正黑體&#x27;&quot;,</span><br><span class="line">&quot;editor.fontLigatures&quot;: true,</span><br><span class="line">&quot;editor.smoothScrolling&quot;: true,</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keybindings"><a href="#Keybindings" class="headerlink" title="Keybindings"></a>Keybindings</h2><p>為字串和 markdown 設定的快捷鍵，不確定這叫什麼名字，就叫 <code>auto surrounding feature</code><br>用途是一鍵將字串包起來，使用粗體、雙引號就不用一直移來移去了</p>
+<p>設定方法：</p>
+<ul>
+<li><code>Ctrl+K</code> then <code>Ctrl+S</code></li>
+<li>Click to open <code>keybindings.json</code></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// wrap a selection with single quotes (&#x27;)</span></span><br><span class="line">    <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;&#x27;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;editor.action.insertSnippet&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;when&quot;</span>: <span class="string">&quot;editorHasSelection &amp;&amp; editorTextFocus&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;args&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;snippet&quot;</span>: <span class="string">&quot;&#x27;$&#123;0:$&#123;TM_SELECTED_TEXT&#125;&#125;$0&#x27;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// wrap a selection with single quotes (*)</span></span><br><span class="line">    <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;numpad_multiply&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;editor.action.insertSnippet&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;when&quot;</span>: <span class="string">&quot;editorHasSelection &amp;&amp; editorTextFocus&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;args&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;snippet&quot;</span>: <span class="string">&quot;**$&#123;0:$&#123;TM_SELECTED_TEXT&#125;&#125;$0**&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// wrap a selection with single quotes (&quot;)</span></span><br><span class="line">    <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;shift+&#x27;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;editor.action.insertSnippet&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;when&quot;</span>: <span class="string">&quot;editorHasSelection &amp;&amp; editorTextFocus&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;args&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;snippet&quot;</span>: <span class="string">&quot;\&quot;$&#123;0:$&#123;TM_SELECTED_TEXT&#125;&#125;$0\&quot;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="Integrated-Terminal"><a href="#Integrated-Terminal" class="headerlink" title="Integrated Terminal"></a>Integrated Terminal</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/integrated-terminal">VSCode - Integrated Terminal</a><br>  - 可以在 <code>使用者設定</code> 中，修改所需的 default terminal</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Command Prompt</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;</span><br><span class="line"><span class="comment">// PowerShell</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot;</span><br><span class="line"><span class="comment">// Git Bash</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Program Files\\Git\\bin\\bash.exe&quot;</span><br><span class="line"><span class="comment">// Bash on Ubuntu (on Windows)</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\bash.exe&quot;</span><br><span class="line"></span><br><span class="line"><span class="comment">// zsh</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\bash.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [</span><br><span class="line">    &quot;-c&quot;,</span><br><span class="line">    <span class="string">&quot;zsh&quot;</span></span><br><span class="line">],</span><br><span class="line"></span><br><span class="line"><span class="comment">// cmder</span></span><br><span class="line">&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\Windows\\System32\\cmd.exe&quot;,</span><br><span class="line">&quot;terminal.integrated.shellArgs.windows&quot;: [</span><br><span class="line">    &quot;/K&quot;,</span><br><span class="line">    <span class="string">&quot;C:\\cmder\\vscode.bat&quot;</span></span><br><span class="line">],</span><br><span class="line"></span><br><span class="line"><span class="comment">// font &amp; fontSize</span></span><br><span class="line">&quot;terminal.integrated.fontFamily&quot;: &quot;DejaVu Sans Mono for powerline&quot;,</span><br><span class="line">&quot;terminal.integrated.fontSize&quot;: 15,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>zsh</p>
+<ul>
+<li><p>之前看一些教學，很多大神 terminal 都不知道在猛什麼的，所以就想來改一下，查一下才知道大家都用 oh-my-zsh 來修改，它本身也自帶許多 themes 可以用，或者去拉別人的 custom theme 來用。</p>
+</li>
+<li><p>以下列出大致的步驟：</p>
+<ol>
+<li>開啟 Windows10 上的 WSL，並於 Microsoft store 安裝 Ubuntu</li>
+<li>下載 <code>curl</code>, <code>git</code>, <code>zsh</code>, <code>oh-my-zsh</code>, <code>powerline fonts</code></li>
+<li>於 <code>.bashrc</code> 中加入 <code>bash -c zsh</code> 啟動 zsh</li>
+<li>創建及修改 <code>.zshrc</code></li>
+<li>至 VSCode 使用者選項中加入 zsh 的啟動選項</li>
+</ol>
+</li>
+<li><p>詳細步驟可參考下列連結：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://medium.com/hungys-blog/windows-subsystem-for-linux-configuration-caf2f47d0dfb">Windows Subsystem for Linux 環境配置 (最新 1709 版)</a></li>
+<li><a target="_blank" rel="noopener" href="https://evdokimovm.github.io/windows/zsh/shell/syntax/highlighting/ohmyzsh/hyper/terminal/2017/02/24/how-to-install-zsh-and-oh-my-zsh-on-windows-10.html">How to Install Zsh and Oh My Zsh on Windows 10</a></li>
+<li><a target="_blank" rel="noopener" href="https://nereuseng.github.io/2017/11/08/oh-my-zsh/">Windows 10上整合Vs code的Oh-my-zsh(20180119更新)</a></li>
+</ol>
+<blockquote>
+<p>最後發生一個問題就是，在 Ubuntu 中排版是正確的。<br>但是因為想要用的 zsh theme 格式在 VSCode 中會跑掉，而且它的圖示也會亂跳，所以也就放棄使用了。<br>- 歪掉的結果如下圖：<br><img src="https://imgur.com/QkgMirF.jpg" alt="zsh bug"></p>
+</blockquote>
+<!-- anchor -->
+</li>
+</ul>
+</li>
+<li><p>cmder</p>
+<p>  在放棄 zsh 後， google 之後發現這個在 Windows 上頗受好評的 terminal，於是就來試試看 cmder。</p>
+<ul>
+<li><p>安裝設定流程可以參考：<br>  - <a target="_blank" rel="noopener" href="https://winsmarts.com/using-cmder-as-integrated-shell-in-vscode-c3340714fe3c">Using cmder as integrated shell in VSCode</a></p>
+<blockquote>
+<p>不過使用文章中的 init.bat 我的情況是啟動不了，要另外創一個 .bat 去呼叫 init.bat 才行。<br>方法在下面 QA 中。</p>
+</blockquote>
+</li>
+<li><p>若要正常啟動且將預設的啟動目錄改成當前目錄可參考：<br>  - <a target="_blank" rel="noopener" href="https://github.com/Microsoft/vscode-docs/blob/master/docs/editor/integrated-terminal.md#common-questions">Q: Can I use Cmder’s shell with the terminal on Windows?</a></p>
+</li>
+<li><p>修改 theme</p>
+<p>  參考連結：<br>  - <a target="_blank" rel="noopener" href="https://github.com/AmrEldib/cmder-powerline-prompt">Cmder-powerline-prompt</a></p>
+<blockquote>
+<p>不過改了這個之後，原先的 cmder 的 prompt symbol (λ) 會消失<br>解決辦法：<a target="_blank" rel="noopener" href="https://github.com/AmrEldib/cmder-powerline-prompt/issues/23">λ character disappeared</a></p>
+</blockquote>
+<p>  將 prompt 絕對路徑修改成當前資料夾<br>  - <a target="_blank" rel="noopener" href="https://github.com/AmrEldib/cmder-powerline-prompt/issues/17">Display current directory, not the path</a></p>
+</li>
+<li><p>Bug</p>
+<ul>
+<li>使用 vscode + cmder 目前遇到一個小問題，就是 terminal 中的 cursor 動畫不會跟實際位置對齊，有時候會多往右邊一格。cmder.exe 是正常的，但是 vscode 中會有此 bug，目前也找不到解法，先在此紀錄一下。</li>
+<li>後來發現在 vscode.bat 加入下列修改，可以在”第一次”開起時”有機率”不會出現此 BUG。<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set LANG=en.US.UTF8</span><br><span class="line">chcp 65001</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>最後修改完之後成果如下，好看到不行！<br><img src="https://imgur.com/VDhafpo.jpg" alt="cmder"></p>
+<!-- anchor -->
+
+<h2 id="Python-套件"><a href="#Python-套件" class="headerlink" title="Python 套件"></a>Python 套件</h2><ol>
+<li><p>安裝套件<br> - 直接在 Marketplace 搜尋 <code>Python</code> 安裝即可<br> - <a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/languages/python">Python in Visual Studio Code</a>: 介紹 Python 套件的官方 Blog</p>
+</li>
+<li><p>設定 Python 路徑<br> 如 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/python/environments#_manually-specifying-an-interpreter">Manually specifying an interpreter</a> 所提到的，直接覆蓋過預設路徑就好</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;python.pythonPath&quot;: &quot;I:\\Anaconda3\\envs\\vscode\\python.exe&quot;,</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>註：這裡指向的是 Anaconda 所建立的環境，好處就是管理套件方便。</p>
+</blockquote>
+</li>
+<li><p>Pylint 設定</p>
+<p> 使用以下兩行設定將 Pylint 打開<br> 正常來說我們可以設定自己的 <code>pylintPath</code>，但是實測發現指定路徑 pylint 會無效，不確定是不是 Windows10 的問題，用預設的就沒問題。</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;python.linting.pylintPath&quot;: &quot;pylint&quot;,</span><br><span class="line">&quot;python.linting.pylintEnabled&quot;: true,</span><br></pre></td></tr></table></figure>
+
+<p> 接下來使用以下指令來生成 pylint 的設定</p>
+ <figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pylint --generate-rcfile &gt; .pylintrc</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>[NOTE] 編碼問題<br>如果在執行 pylint 時遇到 utf-8 的編碼問題<br><code>UnicodeDecodeError: &#39;utf-8&#39; codec can&#39;t decode byte 0xff in position 0</code><br>我的情況是因為 PowerShell 終端產生出來的 <code>.pylintrc</code> 是 <code>USC-2</code> 編碼<br>因此只要使用 Notepad++ 更改文件編碼至 <code>utf-8</code> 就可以了<br>- 參考至 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/43782854/pylint-does-not-work-in-visual-studio-code">Pylint does not work in visual studio code</a></p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p>[Problem] pylint - no name ‘Qt’ in module ‘PyQt5.Core’<br>  執行 pylint 時卻碰到一整排 <code>no name xxx in module xxx</code> 的問題<br>  四處搜尋之後發現好像無解，一堆人遇到也沒解法<br>  也因為不影響執行，後來大家幾乎都推薦直接設定 pylint 忽略套件檢查</p>
+<p>  在 <code>.pylintrc</code> 中設定忽略檢查的套件</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">extension-pkg-whitelist=PyQt5</span><br><span class="line">ignored-classes=PyQt5</span><br><span class="line">ignored-modules=PyQt5</span><br></pre></td></tr></table></figure>
+
+<p>  或者在 <code>使用者設定</code> 中輸入</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;python.linting.pylintArgs&quot;: [</span><br><span class="line">        &quot;--extension-pkg-whitelist=PyQt5&quot;,</span><br><span class="line">        &quot;--ignored-classes=PyQt5&quot;,</span><br><span class="line">        <span class="string">&quot;--ignored-modules=PyQt5&quot;</span></span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>參考至 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/20553551/how-do-i-get-pylint-to-recognize-numpy-members">How do I get PyLint to recognize numpy members?</a></p>
+</blockquote>
+</li>
+<li><p>忽略 pylint <code>!</code> 警告<br>  pylint 也會檢查 coding style 是否符合規範<br>  如果不想要看到一堆討人厭的藍色 <code>!</code> warning 可以將其關閉<br>  方法如下，也是在<code>使用者設定</code>中設置選項</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;python.linting.pylintArgs&quot;: [</span><br><span class="line">        <span class="string">&quot;--disable=R,C&quot;</span></span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<p>  其意義為忽略 R 開頭和 C 開頭的警告</p>
+<blockquote>
+<p>參考至<br>- <a target="_blank" rel="noopener" href="https://github.com/DonJayamanne/pythonVSCode/issues/570">How to turn off pylint warning?</a><br>- <a target="_blank" rel="noopener" href="http://pylint-messages.wikidot.com/all-codes">PyLint Messages</a></p>
+</blockquote>
+<p>  最後設定完成後，pylint 就會顯示比較乾淨的 warning 了<br>  <img src="https://imgur.com/8pGPArG.jpg" alt="pylint"></p>
+</li>
+</ul>
+<h2 id="Git-套件"><a href="#Git-套件" class="headerlink" title="Git 套件"></a>Git 套件</h2><p>VSCode 本身就支援 Git 操作，但是有兩個套件真的猛，裝下去直接我的天</p>
+<ul>
+<li><code>Git Lens</code></li>
+<li><code>Git History</code></li>
+</ul>
+<h2 id="Markdown-套件"><a href="#Markdown-套件" class="headerlink" title="Markdown 套件"></a>Markdown 套件</h2><p>這邊使用的是之前在 Atom 用的 Markdown 套件 - <code>Markdown Preview Enhanced</code><br>另外還有使用 Markdown 語法檢查套件 - <code>markdownlint</code><br>沒用之前還真的不知道以前寫的 markdown 都不符合規範XD</p>
+<ul>
+<li><p>markdownlint 關閉語法規範<br>  在使用者設定中可以關閉不想檢查的規範</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;markdownlint.config&quot;: &#123;</span><br><span class="line">    &quot;MD013&quot;: false,</span><br><span class="line">    &quot;MD029&quot;: false,</span><br><span class="line">    &quot;MD007&quot;: false</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>小技巧：使用 <code>&lt;!-- anchor --&gt;</code> 同步兩視窗<br>  因為 scroll sync 會被大圖片破壞掉同步機制，導致兩視窗不對齊。<br>  因此最好是在圖片的下方加上 <code>&lt;!-- anchor --&gt;</code> 來對齊視窗。例如：</p>
+  <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">img_name</span>](<span class="link">img_link</span>)</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- anchor --&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>  - 參考至 <a target="_blank" rel="noopener" href="https://github.com/shd101wyy/vscode-markdown-preview-enhanced/issues/37">scrollSync trouble in vscode</a></p>
+</li>
+</ul>
+<p>以下分享我 MPE 的設定</p>
+<ul>
+<li><p>User setting</p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;markdown.preview.breaks&quot;: true,</span><br><span class="line">&quot;markdown.preview.fontFamily&quot;: &quot;DejaVu Sans Mono, &#x27;微軟正黑體&#x27;&quot;,</span><br><span class="line">&quot;markdown-preview-enhanced.enableTypographer&quot;: true,</span><br><span class="line">&quot;markdown-preview-enhanced.printBackground&quot;: true,</span><br><span class="line">&quot;markdown-preview-enhanced.previewTheme&quot;: &quot;monokai.css&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>style.less</p>
+  <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;bitstream-vera&#x27;</span>;</span><br><span class="line">  <span class="attribute">src</span>: url(<span class="string">&#x27;../fonts/resources/bitstream-vera/bitstream-vera.woff&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;dejavu&#x27;</span>;</span><br><span class="line">  <span class="attribute">src</span>: url(<span class="string">&#x27;../fonts/resources/dejavu/dejavu.ttf&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">font-family</span>: <span class="string">&#x27;DejaVu Sans Mono&#x27;</span>, <span class="string">&#x27;dejavu&#x27;</span>, <span class="string">&#x27;bitstream-vera&#x27;</span>, sans-serif, <span class="string">&quot;微軟正黑體&quot;</span>;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">17px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Inline Code */</span></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;DejaVu Sans Mono&#x27;</span>, <span class="string">&#x27;dejavu&#x27;</span>, <span class="string">&quot;微軟正黑體&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Code Block */</span></span><br><span class="line"><span class="selector-tag">pre</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;DejaVu Sans Mono&#x27;</span>, <span class="string">&#x27;dejavu&#x27;</span>, <span class="string">&quot;微軟正黑體&quot;</span>;</span><br><span class="line">    <span class="comment">// white-space: pre-wrap;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">strong</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="其他套件"><a href="#其他套件" class="headerlink" title="其他套件"></a>其他套件</h2><ul>
+<li><code>Bracket Pair Colorizer</code><br>  括弧上色，以利辨識多重括弧</li>
+<li><code>filesize</code><br>  顯示檔案大小</li>
+<li><code>Magic Python</code><br>  Syntax highlighter for Python 3</li>
+<li><code>One Monokai Theme</code><br>  還不錯看的主題<br>  - 需添加下列設定  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;workbench.colorTheme&quot;: &quot;One Monokai&quot;,</span><br></pre></td></tr></table></figure></li>
+<li><code>VSCode Log Output Colorizer</code><br>  Highlighter for log output</li>
+<li><code>TODO Highlighter</code><br>  將你的 TODO 上亮到不行的顏色</li>
+<li><code>VSCode Great Icons</code><br>  比預設好分辨的 Icons<br>  - 需添加下列設定  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;workbench.iconTheme&quot;: &quot;vscode-great-icons&quot;,</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>在 VSCode 剛出的時候我有用過，但是那時的套件真得慘不忍睹，不是功能少，就是有 bug，所以當時就直接跑去用 Atom 了。但是現在完全逆轉惹阿，套件支援度很夠，雖然有時候還是會有一些小 bug，不過已經瑕不掩瑜了。重點是現在的 integrated terminal 真的不錯，不用切來切去就是爽，雖然 Windows 上還是遇到滿多坑的 QQ，不過現階來說 VSCode 已經是我的編輯器首選了。</p>
+<p>另外偷偷抱怨一下，用 C/C++ 套件來編譯 C/C++ code 還是很麻煩阿，Windows 上還是用 IDE 就好，不然就只能開 Linux 來寫比較快。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>VSCode 使用設定</p><p><a href="https://mousyball.github.io/my-vscode-setting">https://mousyball.github.io/my-vscode-setting</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Mo1cibo</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2018-02-11</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2018-02-22</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/VSCode/">VSCode</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/Cmder-powerline-env-prompt-for-conda"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Cmder-powerline-env-prompt for conda</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/Hexo-Github-Build"><span class="level-item">Hexo + Github Blog 建立過程</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://mousyball.github.io/my-vscode-setting';
+            this.page.identifier = '/my-vscode-setting';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'mousyball' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/doge_avatar.jpg" alt="Mo1cibo"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Mo1cibo</p><p class="is-size-6 is-block">Blog &amp; Doge</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Taiwan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">5</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/mousyball" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/HEXO/"><span class="level-start"><span class="level-item">HEXO</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Murmur/"><span class="level-start"><span class="level-item">Murmur</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/VSCode/"><span class="level-start"><span class="level-item">VSCode</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-11-03T11:38:00.000Z">2020-11-03</time></p><p class="title"><a href="/New-Journey">New Journey</a></p><p class="categories"><a href="/categories/Murmur/">Murmur</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-23T05:28:52.000Z">2018-02-22</time></p><p class="title"><a href="/Cmder-powerline-env-prompt-for-conda">Cmder-powerline-env-prompt for conda</a></p><p class="categories"><a href="/categories/VSCode/">VSCode</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-11T23:00:52.000Z">2018-02-11</time></p><p class="title"><a href="/my-vscode-setting">VSCode 使用設定</a></p><p class="categories"><a href="/categories/VSCode/">VSCode</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-02-11T21:51:35.000Z">2018-02-11</time></p><p class="title"><a href="/Hexo-Github-Build">Hexo + Github Blog 建立過程</a></p><p class="categories"><a href="/categories/HEXO/">HEXO</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2017-01-01T13:37:34.000Z">2017-01-01</time></p><p class="title"><a href="/mathjax-support">Hexo 顯示數學公式</a></p><p class="categories"><a href="/categories/HEXO/">HEXO</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/02/"><span class="level-start"><span class="level-item">February 2018</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/12/"><span class="level-start"><span class="level-item">December 2016</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/HEXO/"><span class="tag">HEXO</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Murmur/"><span class="tag">Murmur</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VSCode/"><span class="tag">VSCode</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cmder/"><span class="tag">cmder</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prompt/"><span class="tag">prompt</span><span class="tag">1</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2020 Mo1cibo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
