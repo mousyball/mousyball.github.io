@@ -10735,14 +10735,11 @@ body > .section {
 .link-muted:hover {
   color: #fcee09 !important;
 }
-.image.is-7by3 {
-  width: 100%;
-  height: 487px;
-}
-.image.is-7by3 img {
+.image .center {
+  width: 100% !important;
+  height: 487px !important;
   object-fit: cover;
   object-position: 50% 50%;
-  height: 100% !important;
 }
 .image .avatar {
   height: 100%;
@@ -10751,7 +10748,8 @@ body > .section {
 .image .fill {
   object-fit: cover;
   width: 100% !important;
-  height: 100% !important;
+  height: 287px !important;
+  object-position: 50% 50%;
 }
 .button.is-transparent {
   color: inherit;
