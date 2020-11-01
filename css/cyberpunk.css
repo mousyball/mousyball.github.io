@@ -11614,8 +11614,15 @@ figure.highlight .section {
   background-color: #f5e703;
 }
 @media screen and (min-width: 1280px) {
-  .is-1-column .container,
+  .is-3-column .container {
+    max-width: 1472px;
+    width: 1472px;
+  }
   .is-2-column .container {
+    max-width: 1472px;
+    width: 1472px;
+  }
+  .is-1-column .container {
     max-width: 960px;
     width: 960px;
   }
