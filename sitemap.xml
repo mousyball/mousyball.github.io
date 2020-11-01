@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mousyball.github.io/2020/11/01/new-journey/</loc>
+    
+    <lastmod>2020-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mousyball.github.io/2017/01/01/image-resize/</loc>
+    
+    <lastmod>2020-11-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mousyball.github.io/2018/02/23/Cmder-powerline-env-prompt-for-conda/</loc>
     
     <lastmod>2020-10-31</lastmod>
@@ -23,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://mousyball.github.io/2017/01/01/image-resize/</loc>
-    
-    <lastmod>2020-10-31</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mousyball.github.io/2017/01/01/mathjax-support/</loc>
     
     <lastmod>2020-10-31</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>https://mousyball.github.io/2018/02/12/my-vscode-setting/</loc>
-    
-    <lastmod>2020-10-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mousyball.github.io/2020/11/01/new-journey/</loc>
     
     <lastmod>2020-10-31</lastmod>
     
