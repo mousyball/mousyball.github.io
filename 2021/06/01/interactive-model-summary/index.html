@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Interactive Model 心得總結 - Mo1cibo&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Mo1cibo&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Mo1cibo&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="這篇主要紀錄在互動式模型的研究心得，也希望能幫助到同領域的人。 內容會牽涉到不同任務的知識，但主要會以 segmentation 為主，整體可能會有些雜亂，就加減看吧。"><meta property="og:type" content="blog"><meta property="og:title" content="Interactive Model 心得總結"><meta property="og:url" content="https://mousyball.github.io/2021/06/01/interactive-model-summary/"><meta property="og:site_name" content="Mo1cibo&#039;s Blog"><meta property="og:description" content="這篇主要紀錄在互動式模型的研究心得，也希望能幫助到同領域的人。 內容會牽涉到不同任務的知識，但主要會以 segmentation 為主，整體可能會有些雜亂，就加減看吧。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/g3doc/img/kites_detections_output.jpg"><meta property="article:published_time" content="2021-06-01T06:19:30.000Z"><meta property="article:modified_time" content="2021-06-05T15:38:42.575Z"><meta property="article:author" content="Mo1cibo"><meta property="article:tag" content="deep learning"><meta property="article:tag" content="interactive model"><meta property="article:tag" content="detection"><meta property="article:tag" content="segmentation"><meta property="article:tag" content="tracking"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/g3doc/img/kites_detections_output.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://mousyball.github.io/2021/06/01/interactive-model-summary/"},"headline":"Mo1cibo's Blog","image":["https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/g3doc/img/kites_detections_output.jpg"],"datePublished":"2021-06-01T06:19:30.000Z","dateModified":"2021-06-05T15:38:42.575Z","author":{"@type":"Person","name":"Mo1cibo"},"description":"這篇主要紀錄在互動式模型的研究心得，也希望能幫助到同領域的人。 內容會牽涉到不同任務的知識，但主要會以 segmentation 為主，整體可能會有些雜亂，就加減看吧。"}</script><link rel="canonical" href="https://mousyball.github.io/2021/06/01/interactive-model-summary/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=UA-113913328-1" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-113913328-1');</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="center" src="https://raw.githubusercontent.com/tensorflow/models/master/research/object_detection/g3doc/img/kites_detections_output.jpg" alt="Interactive Model 心得總結"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-06-01T06:19:30.000Z" title="2021-06-01T06:19:30.000Z">2021-05-31</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-06-05T15:38:42.575Z" title="2021-06-05T15:38:42.575Z">2021-06-05</time></span><span class="level-item"> Mo1cibo </span><span class="level-item"><a class="link-muted" href="/categories/deep-learning/">deep learning</a></span></div></div><h1 class="title is-3 is-size-4-mobile">Interactive Model 心得總結</h1><div class="content"><p>這篇主要紀錄在互動式模型的研究心得，也希望能幫助到同領域的人。</p>
+<p>內容會牽涉到不同任務的知識，但主要會以 segmentation 為主，整體可能會有些雜亂，就加減看吧。</p>
+<a id="more"></a>
+
+<h2 id="Applications-of-interactive-model"><a href="#Applications-of-interactive-model" class="headerlink" title="Applications of interactive model"></a>Applications of interactive model</h2><p>在以往較成熟的任務中 (e.g. detection and segmentation)，這類 end-to-end model 都是沒有人機互動的成分在的。但隨著應用的發展，人與科技還是少不了互動的環節。甚至，有人的參與可以讓模型表現得更好。以下舉幾個例子來說明佐證：</p>
+<ul>
+<li>Adobe - Photoshop (Adobe Sensei)<ul>
+<li>PS 應該是最能體現互動式模型或演算法價值的產品，例如影像去背、影片追蹤修改、2D轉3D或風格轉換等等。</li>
+</ul>
+</li>
+<li>Smart Phone<ul>
+<li>雖然相機內的應用大部分還是以自動算法為主，不過像是事後調整對焦或人像打光這些功能，也是互動式模型的價值所在。</li>
+</ul>
+</li>
+<li>Labeling Tool<ul>
+<li>資料在深度學習無疑是最重要的核心之一，但蒐集資料的成本也是頗為昂貴，因此互動式模型在此介入的空間很大，市面上也不少標註平台提供 AI-assisted Tool 來加速標記資料 (e.g. <code>Supervisely</code>)。</li>
+<li>傳統上會使用 model 來做預標註 (prelabeling)，但是隨著技術成熟，標註的精準度也被極度要求，還有預標註結果的後續修正也極度不符合成本。除非是 prototype 階段，不然都不會使用預標註。另外，能預標註的任務其實也很受限，因為越高維的資料只要標錯就會差很多。</li>
+<li>還有利用模型輔助把公開資料集增加標註種類也是範疇之一，例如 <a target="_blank" rel="noopener" href="https://github.com/shiyinzhang/Pixel-ImageNet">Pixel-ImageNet</a> 讓 segmentation 也有一個訓練 backbone 的大型資料集。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Interactive-Segmentation"><a href="#Interactive-Segmentation" class="headerlink" title="Interactive Segmentation"></a>Interactive Segmentation</h2><p>以下會分成幾個小節來談談 interactive 或 segmentation 各個面向的問題</p>
+<ul>
+<li>Guidance Map</li>
+<li>Backbone</li>
+<li>Feature Aggregation</li>
+<li>Loss</li>
+<li>Edge</li>
+<li>Refinement</li>
+<li>Training</li>
+<li>Dataset</li>
+</ul>
+<h3 id="Guidance-Map"><a href="#Guidance-Map" class="headerlink" title="Guidance Map"></a>Guidance Map</h3><p>提到互動式模型 (interactive model)，基本上就會牽涉到 user input 的設計。在傳統的電腦視覺中，<code>GrabCut</code> 是最為人知的互動式切割算法，只要標記大致的前後景資訊，就可以迅速分割出前後景像素。<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.00243">Deep GrabCut for Object Selection</a> 則是參考 <code>GrabCut</code> 的輸入方式，但僅用前景的塗抹區域去產生一個 rectagnle area，然後再用 paper 所提的方法去產生 <code>distance map</code>，而這個 <code>distance map</code> 就是會疊加進輸入的 <code>guidance map</code>。</p>
+<p><img src="https://github.com/jfzhang95/DeepGrabCut-PyTorch/raw/master/doc/deepgc.png" alt="Distance map of DeepGrabCut"></p>
+<p><code>guidance map</code> 的選擇很大程度的會影響到 segmentation 結果，對於精準度較高的任務，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.00243">Deep GrabCut for Object Selection</a> 的 <code>distance map</code> 顯然不是適合的設計，因為實際效果很容易破碎，其設計也容許切割結果溢出長方形區域。</p>
+<p>Adobe labs 的 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1603.04042">Deep Interactive Object Selection</a> 提出一種產生 <code>distance map</code> 的方法，其利用 postive and negative clicks (前後景點) 兩組點數去產生各自的 <code>Euclidean distance map</code>，最後總共會有 3 + 2 (RGB + p/n clicks) 層做為輸入。這種使用點擊的方式，讓使用上更符合直覺，操作上也更快速，因為只要點擊大致的後景區域即可。</p>
+<p><img src="https://imgur.com/ENJPNDn.jpg" alt="Distance map of Deep Interactive Object Selection"></p>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1711.09081">Deep Extreme Cut: From Extreme Points to Object Segmentation</a> 簡稱 <code>DEXTR</code>，也是這領域的優秀之作，其產生 <code>guidance map</code> 的方式是將一小範圍的 Gaussian point 放置在物件的四個極點 (extreme point)。這種方式只需要 4 點即可，但這也是它最大的缺點，不能像其他 click-based 的方法有修補的機會。還有像是對於使用者輸入非常不直覺，會需要判斷何處是極點，並且需要用滑鼠瞄準點擊。另外，這篇的 ablation study 做得很完整，很值得做為實作的參考。</p>
+<h3 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h3><p>在 segmentation 任務中，backbone 的選擇其實有很大一部份決定了結果穩不穩定。早期可能會使用 classification 或 detection 的 backbone 直接 transfer learning 來做切割，但效果其實都沒有很好，原因在於原先的設計可能是有害於 segmentation 的。</p>
+<p>在 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1705.09914">Dilated Residual Networks</a> 有提到一些原先 resnet 設計對於 segmentation 的危害，例如 max pooling 會導致一些高響應的值，dilated conv 會造成 gridding artifacts，甚至 residual connection 會讓這些效應疊加得更嚴重。還有一些原因像是，bilinear interpolation 是不可學習的 (non-learnable)；dilated conv 獲取的長距訊息不一定是有用的；BN 對 task transfer 有害；strided 1x1 conv 會造成 checkerboard artifacts 等等。以上種種缺點會導致預測結果容易空洞、破碎。</p>
+<p><img src="https://imgur.com/ARnvaR8.jpg" alt="Gridding artifacts introduced in DRN"></p>
+<p>近年來的研究也有提出許多專為 segmentation 任務的 backbone，例如：</p>
+<ul>
+<li>Deeplab 系列 - <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.02611">v3+</a><ul>
+<li>dilated convolution</li>
+<li>decoder</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.01169">Res2Net</a><ul>
+<li>multi-scale fusion of residual modules</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1908.07919">HRNet</a> with <a target="_blank" rel="noopener" href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123510171.pdf">OCR</a><ul>
+<li>multi-scale fusion of feature maps</li>
+<li>Object Contextual Representation</li>
+</ul>
+</li>
+</ul>
+<p>最後提一個比較特別的是 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1912.11370">Big Transfer (BiT): General Visual Representation Learning</a>，Google 開外掛用 JFT-300M 和算力訓練出來的 backbone，實際測試發現沒什麼特殊調整，在 segmentation 上也有不錯的遷移能力，不過缺點就是 model 有點肥，卡不夠的情況下 batch size 很有限。</p>
+<h3 id="Feature-Aggregation"><a href="#Feature-Aggregation" class="headerlink" title="Feature Aggregation"></a>Feature Aggregation</h3><p>在 feature aggregation 範疇內就屬 encoder 和 decoder 了，其實說穿的也就是把玩 feature 的組合。以下就條列一些 components，但實際效果差異不大，不同組合不同任務都會有不同的結果，需要用試的。</p>
+<ul>
+<li>Encoder<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1612.01105">PSP</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">ASPP</a></li>
+<li><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_DenseASPP_for_Semantic_CVPR_2018_paper.pdf">DenseASPP</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1903.11816">JPU</a></li>
+</ul>
+</li>
+<li>Decoder<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.02611">Vanilla Decoder</a> from DeeplabV3+</li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.06484">Deep Layer Aggregation</a></li>
+</ul>
+</li>
+</ul>
+<p>這邊稍微提一下，interactive segmentation 這邊的輸出是 single layer，若把輸出改成 2 layer，讓 decoder 輸出前後景，訊息損失比壓縮成一層還少，因此效果會比較好。</p>
+<h3 id="Loss"><a href="#Loss" class="headerlink" title="Loss"></a>Loss</h3><p>Loss 可以著墨的地方其實不少，有時候小改動其實就可以有不錯的效果，例如 detection 的 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1708.02002">Focal Loss</a>。</p>
+<p>在 segmentation 中，最後 loss 的計算是 pixel-to-pixel 的分類，其實並沒有用到區域附近的資訊，例如 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1812.01593">Improving Semantic Segmentation via Video Prediction and Label Relaxation</a> 就提出 label relaxation 的概念，最後單點的 loss 是去計算 3x3 區域的 loss sum，不過缺點是計算量會變大。</p>
+<p>再來，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1708.02002">Focal Loss</a> 的概念多少也可以用在 interactive segmentation。通常在這個任務中，easy example 是大部分的前景和背景，在最後收斂時，hard example 都會集中在邊界上，因此稍為的平衡兩者，對結果會有些微的幫助。</p>
+<p>講到平衡 loss，<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1711.09081">DEXTR</a> 本身也有對前景和背景的 pixel 數量去平衡，因為訓練的時候，單物件 (前景) 在影像中與背景的比例很容易過於懸殊。</p>
+<p>剛有提到 hard example 都會集中到 edge 上，因此像 <a target="_blank" rel="noopener" href="https://blog.csdn.net/P_LarT/article/details/90604875">BASNet: Boundary Aware Salient Object Detection</a> 也用 3 個 loss (<code>BCE</code>、<code>SSIM</code>、<code>IOU</code>) 去學習 edge。因為 BCE 後期 loss 會過於平坦，其他兩者利用影像上的結構性，去彌補後期學習上的梯度。</p>
+<p><img src="https://imgur.com/xRvGMfE.jpg" alt="Losses introduced in BASNet"></p>
+<p>既然都提到 hard example，怎麼能不提 OHEM。在 segmentation 中怎麼做，可以參考 <a target="_blank" rel="noopener" href="https://github.com/HRNet/HRNet-Semantic-Segmentation/blob/master/lib/core/criterion.py#L29">[Github] HRNet - OhemCrossEntropy</a>。</p>
+<h3 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h3><p>上一小節提到，hard example 在訓練後期都會集中到 edge 附近，雖然 loss 的挑選可以有些微改善，但是畢竟不是直接的去學習 edge，所以改善有限。</p>
+<p>Salient Object Detection 有一時期的主流也是在研究 edge / boundary 的問題，基本上都是有些許的提升，改善不少邊界破碎的問題。</p>
+<ul>
+<li>Selectivity or Invariance: Boundary-aware Salient Object Detection</li>
+<li>Towards High-Resolution Salient Object Detection</li>
+<li>EGNet: Edge Guidance Network for Salient Object Detection</li>
+</ul>
+<p>Segmentation 針對 edge 提出改善的其實有不少 paper，以下就舉兩個例子：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.09569">[PoolNet] A Simple Pooling-Based Design for Real-Time Salient Object Detection</a></p>
+<ul>
+<li>基本架構就是 U-shape FPN structure 在去加上 Pyramid Pooling Module (PPM) 及 Feature Aggregation Module (FAM) 組合而成。</li>
+<li>中間的連結就是去組合不同 stage 的 feature 和 guidance，然後利用 3 個 residual block 去產出並學習 coarse-to-fine 的 edge，最後再用學習出來的 edge 做為 guidance 去做最後的 feature fusion 輸出。</li>
+<li>因為架構稍微大了點，缺點就是參數量偏多。</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1907.05740">[GSCNN] Gated-SCNN: Gated Shape CNNs for Semantic Segmentation</a></p>
+<ul>
+<li>基本架構為 DeepLabV3+，加上提出 Shape Stream Attention Module 去學習 edge。</li>
+<li>Edge 是由 <code>Canny egde</code> 計算而來的，但這成為它最大的限制，畢竟 edge 的取得很大程度會依賴輸入影像的狀況，用在場景單一的比賽中可能可行，但是實際影像的 edge 可能不是這麼穩定。</li>
+<li>這篇 paper 產出的過程中，也曾經是 cityscapes#1，而且並沒有用額外的 data。</li>
+</ul>
+</li>
+</ul>
+<p>雖然針對 edge 的工作不少，但畢竟 edge 的來源會依賴輸入影像，穩定度會受影響，改善幅度也有限。</p>
+<h3 id="Refinement"><a href="#Refinement" class="headerlink" title="Refinement"></a>Refinement</h3><p>事後 refinement 面向的工作也不少，比較早期有名的應該就是 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.00915">DeepLabV1</a> 的 <code>Fully Connected CRFs</code>，作用是去優化邊緣的預測結果，但是在 DeepLabV3 後就被移除了。</p>
+<p><img src="https://imgur.com/bzxN1tt.jpg" alt="Fully Connected CRFs introduced in DeepLabV1"></p>
+<p>提一下 Kaming He 大神組的 paper - <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1912.08193">PointRend</a>，基於 Mask RCNN 去優化 mask branch 的一個工作，它將切割視為渲染問題，對不確定性高的點去做採樣，並且重新用 NN 分類。因為原作是多類的，改成單類會無法沿用原作的作法，但是可以利用 entropy 的概念去選 <code>p=0.5</code> 的點來模擬一樣的概念，亂度最高等於不確定性最高。但這個 work 有一個嚴重的缺陷是，雖然能夠很好的去採樣到邊界附近的點，但最後卻用 MLP 去做重新分類，這樣會缺乏了 image context，實際效果也是不太穩定。</p>
+<p><img src="https://camo.githubusercontent.com/49f1d7373f823918ac0db09441c0044c3b5cfbd02a58cc2b13662e5dc9719aeb/68747470733a2f2f616c6578616e6465722d6b6972696c6c6f762e6769746875622e696f2f696d616765732f6b6972696c6c6f7632303139706f696e7472656e642e6a7067" alt="Refinement introduced in PointRend"></p>
+<p>HRNet 團隊也發過一篇 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2007.04269">SegFix: Model-Agnostic Boundary Refinement for Segmentation</a>，也是針對邊界優化的工作，利用 boundary 和 direction 兩個分支去學習出 offset map，然後優化邊界的像素。在 cityscapes benchmark 顯示，用在 DeepLabV3 / HRNet / Gated-SCNN 都有 0.5 ~ 1 % 的改善。</p>
+<p><img src="https://imgur.com/XZuaG4M.jpg" alt="Refinement introduced in SegFix"></p>
+<p>講回 interactive segmentation 這邊的 paper - <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2001.10331">f-BRS</a>，它是針對 feature map 去做迭代優化，針對不同深度的 feature 優化，可以在預測結果與速度上取捨，實際測起來效果沒有差太多。</p>
+<p><img src="https://raw.githubusercontent.com/saic-vul/fbrs_interactive_segmentation/master/images/fbrs_video_preview.gif" alt="Refinement introduced in SegFix"></p>
+<p>最後做個總結，不管是哪種 refinement，目前實測結果都不太優，原因都是會導致預測的邊界破碎或不平滑，比較不符合 interactive segmentation 的應用場景。比如像是 <code>f-BRS</code> 將優化關掉，反而會讓結果更為穩定。</p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>互動式模型訓練的方式會跟模型的設計方式有關，會分成兩種，一種是一般常見的訓練方式，前饋然後反向更新。另一種則是 iterative training，例如 <code>f-BRS</code>，這個訓練方式主要是去模擬實際的互動。其中取樣點的生成也是有好幾種策略，可以參考 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1603.04042">Deep Interactive Object Selection</a>。另外，<code>f-BRS</code> 作者有在 repo 回應說，其實隨機選點和用策略選的結果差不多，並沒有顯著的差異。</p>
+<p>近年來許多 augmentation、distillation 或 self-supervised learning 等方法的推陳出新，雖然有嘗試過像 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.12848">Unsupervised Data Augmentation for Consistency Training</a> 這類的訓練方式，但很多新方法其實都是有錢人的玩具，只有一兩張卡資源的人還是玩不了阿。(Q_Q)</p>
+<p>最後提一下 transform 的部分，除了一般的 crop、rotation 之類的轉換，互動式要考慮到邊界的狀況，因此要對轉換完的圖像，再對邊界進行內縮 padding，否則預測結果會與邊界偶爾有個空隙。</p>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>訓練的資料來源品質會影響評測結果的上限，看過不少 issues 都有再反應這件事。Segmentation task 中常用的 baseline，如 VOC 和 SBD 的標註就過於粗糙。再來像是 COCO 的物件偏小，要考慮應用場景的問題。DAVIS dataset 主要是做 video segmentation，標註品質不錯，取樣後也可以用來訓練單張影像。近期不少 paper 使用 LVIS dataset，其標註品質頗好，數量及類別也很多。</p>
+<p>雖然 VOC 和 SBD 標註略為粗糙，不過對於做 prototype 還是滿好用的，短時間就能看到成果。</p>
+<p>另外，像是大公司都有天量級 dataset，例如 Google 內部使用的 JFT-300M。或是像 FAIR 出產的 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1805.00932">Exploring the Limits of Weakly Supervised Pretraining</a>，也拿 billions 級別的 instagram image 去預訓練。這些天量級別的 dataset 也間接證明了一件事，巨量資料是有機會將模型表達力推到模型容量的上限。而且訓練出來的準確度，真的不是一個級別的差距。</p>
+<h2 id="Other-interactive-models"><a href="#Other-interactive-models" class="headerlink" title="Other interactive models"></a>Other interactive models</h2><p>其實不同的任務都有做互動式的空間，簡單的像是 GAN 這類的參數調控，複雜的就像 interactive segmentation 這類需要設計的任務。以下就舉一些例子，例如 detection 可以設計 auto-fitting；tracking 目前主流就是框 template feature 去追蹤，可以加入 temporal update，或者使用 segmentation 代替；image matting 可能可以針對 trimap 去做設計之類的。</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>目前研究到現在，各種複雜的組件組合或是特殊訓練方式，並不會帶來巨大的提升。感覺最好的方案反而是簡單的作法，或者是針對符合場景的 data 去做篩選，還有把針對問題的 transform 搞好。如果 segmentation 只能選一個 model，目前應該最推 <code>HRNet + OCR</code>，簡單又好用。</p>
+<p>Segmentation 感覺也到一個瓶頸，除了 multi-scale、NAS、attention，不知道還能玩什麼花樣了。考量到實際產品端，backbone 不能太大太新，考量到速度問題，又不能無限堆疊 feature 或 attention，資源有限的情況下，訓練方式受限，能採用的方案感覺其實也不多。比較不花力氣的大概就是針對 loss 或 regularization 去設計，或者只能等好心人 release 更好的 backbone。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Interactive Model 心得總結</p><p><a href="https://mousyball.github.io/2021/06/01/interactive-model-summary/">https://mousyball.github.io/2021/06/01/interactive-model-summary/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Mo1cibo</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2021-05-31</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-06-05</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/deep-learning/">deep learning</a><a class="link-muted mr-2" rel="tag" href="/tags/interactive-model/">interactive model</a><a class="link-muted mr-2" rel="tag" href="/tags/detection/">detection</a><a class="link-muted mr-2" rel="tag" href="/tags/segmentation/">segmentation</a><a class="link-muted mr-2" rel="tag" href="/tags/tracking/">tracking</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/02/12/why-invest-crypto/"><span class="level-item">為什麼要投資加密貨幣?</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://mousyball.github.io/2021/06/01/interactive-model-summary/';
+            this.page.identifier = '2021/06/01/interactive-model-summary/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'mousyball' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Applications-of-interactive-model"><span class="level-left"><span class="level-item">1</span><span class="level-item">Applications of interactive model</span></span></a></li><li><a class="level is-mobile" href="#Interactive-Segmentation"><span class="level-left"><span class="level-item">2</span><span class="level-item">Interactive Segmentation</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Guidance-Map"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Guidance Map</span></span></a></li><li><a class="level is-mobile" href="#Backbone"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">Backbone</span></span></a></li><li><a class="level is-mobile" href="#Feature-Aggregation"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">Feature Aggregation</span></span></a></li><li><a class="level is-mobile" href="#Loss"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Loss</span></span></a></li><li><a class="level is-mobile" href="#Edge"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Edge</span></span></a></li><li><a class="level is-mobile" href="#Refinement"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">Refinement</span></span></a></li><li><a class="level is-mobile" href="#Training"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">Training</span></span></a></li><li><a class="level is-mobile" href="#Dataset"><span class="level-left"><span class="level-item">2.8</span><span class="level-item">Dataset</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Other-interactive-models"><span class="level-left"><span class="level-item">3</span><span class="level-item">Other interactive models</span></span></a></li><li><a class="level is-mobile" href="#Summary"><span class="level-left"><span class="level-item">4</span><span class="level-item">Summary</span></span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/cato_avatar.jpg" alt="Mo1cibo"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Mo1cibo</p><p class="is-size-6 is-block">Blog &amp; Doge</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Taiwan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/mousyball" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/mousyball"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/HEXO/"><span class="level-start"><span class="level-item">HEXO</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Murmur/"><span class="level-start"><span class="level-item">Murmur</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/VSCode/"><span class="level-start"><span class="level-item">VSCode</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/deep-learning/"><span class="level-start"><span class="level-item">deep learning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/invest/"><span class="level-start"><span class="level-item">invest</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Mo1cibo&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2021 Mo1cibo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
